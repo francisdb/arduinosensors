@@ -25,18 +25,16 @@ void loop()
 {
   ledOn();
   
-  float temperature = getTemperature();
+  float temperature = getTemperature();  
+  int lightLevel = getLightLevel();
   
   Serial.print("temp\t");
   Serial.print(temperature);
   Serial.print("\t");
-  
-  int lightLevel = getLightLevel();
-  
   Serial.print("light\t");
   Serial.println(lightLevel);
   
-  delay(200);
+  delay(100);
   ledOff();
   delay(3000);
 }
